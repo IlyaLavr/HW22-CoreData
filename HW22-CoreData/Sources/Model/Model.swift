@@ -47,7 +47,7 @@ class ModelData {
         saveContext()
     }
     
-    func delete(person: Person) {
+    func deletePerson(person: Person) {
         context.delete(person)
         saveContext()
     }

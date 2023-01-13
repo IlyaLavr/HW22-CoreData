@@ -21,8 +21,7 @@ class DetailViewController: UIViewController {
     
     lazy var mainImagePerson: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: Strings.DetailViewController.mainImagePerson)
-        imageView.tintColor = .systemGray
+        imageView.image = UIImage(named: Strings.DetailViewController.mainImagePerson)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 75
@@ -94,7 +93,7 @@ class DetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: Strings.DetailViewController.navigationButtonEdit, style: .plain, target: self, action: #selector(editTapped))
         setupHierarchy()
         setupLayout()
-        presenter?.setData()
+        presenter?.setUpParametersPerson()
     }
     
     // MARK: - Setup
@@ -192,7 +191,6 @@ class DetailViewController: UIViewController {
             textGender.backgroundColor = .systemGray6
             
             datePicker.isHidden = false
-            
             genderPicker.isHidden = false
         } else {
             let name = textNamePerson.text
@@ -200,7 +198,7 @@ class DetailViewController: UIViewController {
             let gender = textGender.text
             let image = mainImagePerson.image?.pngData()
             
-            presenter?.updateData(name: name, dateOfBirth: date, gender: gender, image: image)
+            presenter?.updateParametersPerson(name: name, dateOfBirth: date, gender: gender, image: image)
             
             navigationItem.rightBarButtonItem?.title = Strings.DetailViewController.navigationButtonEdit
             navigationItem.rightBarButtonItem?.tintColor = .systemBlue

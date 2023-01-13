@@ -8,8 +8,8 @@
 import Foundation
 
 protocol DetailPresenterProtocol: AnyObject {
-    func setData()
-    func updateData(name: String?, dateOfBirth: String?, gender: String?, image: Data?)
+    func setUpParametersPerson()
+    func updateParametersPerson(name: String?, dateOfBirth: String?, gender: String?, image: Data?)
     
     init(user: Person, view: DetailViewProtocol, router: RouterProtocol)
 }
@@ -26,11 +26,11 @@ class DetailPresenter: DetailPresenterProtocol {
         self.router = router
     }
     
-    func setData() {
+    func setUpParametersPerson() {
         view?.setupDetailedView(name: person.name, dateOfBirth: person.dateOfBirth, gender: person.gender, image: person.image)
     }
     
-    func updateData(name: String?, dateOfBirth: String?, gender: String?, image: Data?) {
+    func updateParametersPerson(name: String?, dateOfBirth: String?, gender: String?, image: Data?) {
         person.name = name
         person.dateOfBirth = dateOfBirth
         person.gender = gender

@@ -49,7 +49,7 @@ class MainScreen: MainPresenterProtocol {
     
     func deletePerson(index: IndexPath) {
         guard let user = person?[index.row] else { return }
-        model.delete(person: user)
+        model.deletePerson(person: user)
         fetchPersons()
     }
     

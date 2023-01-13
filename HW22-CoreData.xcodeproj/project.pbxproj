@@ -94,11 +94,11 @@
 		09A3D31F2971F51D007E7609 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				09A3D3322971F74B007E7609 /* Helpers */,
-				09A3D32B2971F66F007E7609 /* Cell */,
+				09A3D3202971F526007E7609 /* MainScreen */,
 				09A3D32A2971F65E007E7609 /* DetailScreen */,
 				09A3D3232971F588007E7609 /* Model */,
-				09A3D3202971F526007E7609 /* MainScreen */,
+				09A3D32B2971F66F007E7609 /* Cell */,
+				09A3D3322971F74B007E7609 /* Helpers */,
 				09A3D3382971F826007E7609 /* Strings.swift */,
 			);
 			path = Sources;

@@ -13,7 +13,7 @@ enum Strings {
     }
     
     enum DetailViewController {
-        static let mainImagePerson = "person.crop.circle"
+        static let mainImagePerson = "person"
         static let iconNameImage = "person.fill"
         static let iconDateBirth = "calendar"
         static let iconGender = "person.fill.questionmark"

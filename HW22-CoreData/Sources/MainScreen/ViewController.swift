@@ -22,11 +22,13 @@ class ViewController: UIViewController, MainViewProtocol {
     lazy var textField: UITextField = {
         let textField = UITextField()
         textField.textColor = .black
-        textField.backgroundColor = .lightGray
+        textField.backgroundColor = .white
         textField.textAlignment = .center
+        textField.layer.borderWidth = 2
+        textField.layer.borderColor = UIColor.gray.cgColor
+        textField.layer.cornerRadius = 15
         textField.placeholder = Strings.ViewController.textFieldPlaceholder
         textField.isHighlighted = true
-        textField.layer.cornerRadius = 20
         return textField
     }()
     
